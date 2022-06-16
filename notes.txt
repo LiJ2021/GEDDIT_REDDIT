@@ -1,0 +1,34 @@
+building a Reddit Clone
+
+ The application should allow a user to view a series of images, upvote or downvote an image, see the top images (images with the largest net score), view the net score that each image has accumulated, and load additional images to vote on at the click of a button. 
+
+You will likely want to store your images and votes in a database.
+
+
+drag folder into terminal to install/initialize all of the dependecies/packages we will need
+npm init -y (-y --> says yes to all of the questions )
+npm i express
+npm i body-parser
+npm i node-fetch
+npm i pug
+npm i mongodb
+// or npm i pg(?)
+
+//COMMAND TO INSTALL THEM ALL AT ONCE 
+npm i express pug body-parser node-fetch mongodb
+
+can go into package.json to check to make sure all dependencies needed are downloaded
+
+make a new file - app.js to start setting up our basic express file
+
+what do you want the database to be about?  
+
+natural wonders - like the 
+What is Bioluminescence? Dinoflagellates, a type of algae that moves through the sea, create the bright blue light known as bioluminescence when they form in massive numbers. The organisms have a color that makes the ocean appear red in the daylight, hence the term red tide.
+
+do i want to give the users the option to post pictures or just post links to the pictures - or like devan said they send us the link to the webpage where the image is stored?  That way we can do like the weather app and pull in the image to display in an area using the image tag and some similar JS.
+
+in my pug form the first field will be input text for the location of the natural wonder.
+
+
+adding mongodb

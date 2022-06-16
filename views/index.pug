@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title GEDDIT REDDIT 
+    body 
+        h1 Natural Wonders
+        form(action="/wonders", method="POST")
+            input(type="text", name="place", placeholder= "Location")
+            input(type="text", name="naturalwonder", placeholder="Cool Natural Wonder?")
+            button(type="submit") Submit
+        h1 Natural Wonders List
+        //- h1 #{wonders}
+        each wonder in wonders
+            h3=`${wonder.place} - ${wonder.naturalwonder}`
+            //-information is coming from the created item 'wonder' and coming from the things in the array
