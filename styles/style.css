@@ -1,0 +1,13 @@
+#header {
+    padding: 30px;
+    text-align: center;
+    background-image: url('Lake-MI-Beach-Sand-ns.jpeg');
+    /* background: #1abc9c; */
+    color: black;
+    font-size: 17px;
+  }
+  img{
+    height: auto;
+    width: 25rem;
+
+  }

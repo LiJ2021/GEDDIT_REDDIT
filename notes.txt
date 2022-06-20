@@ -1,6 +1,9 @@
 building a Reddit Clone
 
- The application should allow a user to view a series of images, upvote or downvote an image, see the top images (images with the largest net score), view the net score that each image has accumulated, and load additional images to vote on at the click of a button. 
+ The application should allow a user to view a series of images, 
+ upvote or downvote an image, see the top images (images with the largest net score), 
+ view the net score that each image has accumulated, 
+ and load additional images to vote on at the click of a button. 
 
 You will likely want to store your images and votes in a database.
 
@@ -23,8 +26,18 @@ make a new file - app.js to start setting up our basic express file
 
 what do you want the database to be about?  
 
-natural wonders - like the 
+natural wonders - like the :
+
+
 What is Bioluminescence? Dinoflagellates, a type of algae that moves through the sea, create the bright blue light known as bioluminescence when they form in massive numbers. The organisms have a color that makes the ocean appear red in the daylight, hence the term red tide.
+
+Sliding Rocks of Death Valley
+
+INCREDIBLE BUTTERFLY NAVIGATION: Monarch butterflies find their way thousands of miles to specific mountains
+
+
+BALL LIGHTNING: Spheres of light that appear during or after a thunderstorm.
+
 
 do i want to give the users the option to post pictures or just post links to the pictures - or like devan said they send us the link to the webpage where the image is stored?  That way we can do like the weather app and pull in the image to display in an area using the image tag and some similar JS.
 

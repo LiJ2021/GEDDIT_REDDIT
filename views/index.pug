@@ -4,15 +4,31 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
         title GEDDIT REDDIT 
     body 
+    #header 
         h1 Natural Wonders
+        h3 A few fascinating natural wonders on our planet.
+    #form     
         form(action="/wonders", method="POST")
-            input(type="text", name="place", placeholder= "Location")
-            input(type="text", name="naturalwonder", placeholder="Cool Natural Wonder?")
+            p Name and Location of Natural Wonder:
+            input(type="text", name="place", size = 37, placeholder= "Example: Amazon River - South America")
+            br
+            p Description of Natural Wonder:
+            textarea(cols="30", rows="10"  name="naturalwonder", placeholder="Description")
+            br
+            p Do you have an image link?
+            input(type="text", name="imagelink", size = 37,placeholder="Link to image")
+            br
+            br
             button(type="submit") Submit
+    #list 
         h1 Natural Wonders List
         //- h1 #{wonders}
+    #card 
         each wonder in wonders
-            h3=`${wonder.place} - ${wonder.naturalwonder}`
-            //-information is coming from the created item 'wonder' and coming from the things in the array
+            h3=`${wonder.place}`
+            p=` ${wonder.naturalwonder}`
+            img(src=`${wonder.imagelink}`, alt="Natural Wonder Image", srcset="")
+    //-information is coming from the created item 'wonder' and coming from the things in the array

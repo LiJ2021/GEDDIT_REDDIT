@@ -1,11 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+
 const app = express()
 
 app.set("views", "./views")
 app.set("view engine", "pug")
 
 app.use(bodyParser.urlencoded({extended:true}))
+//'call' middleware to access static files-folders
+app.use(express.static('images'))
+app.use(express.static('styles'))
+app.use(express.static('scripts'))
 
 //import the stuff that we need
 const { MongoClient, ServerApiVersion } = require('mongodb');
@@ -17,6 +22,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 let db;
 let wonderCollection;
+let image;
 
 client.connect(err => {
     //check cnxn to database
@@ -35,6 +41,7 @@ client.connect(err => {
 //   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
 //   client.close();
+        image = wonderCollection.imagelink
 });
 
 
@@ -48,9 +55,9 @@ app.get("/", (req, res) =>{
 })
 
 app.post("/wonders", (req,res)=>{
-    console.log(req.body)
+    console.log("request body", req.body)
     wonderCollection.insertOne(req.body).then(result =>{
-        console.log(result)
+        console.log("result", result)
         res.redirect("/") //says go back to the main page when done
 }).catch(error =>console.log(error))
 
