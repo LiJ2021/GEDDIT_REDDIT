@@ -5,6 +5,9 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="style.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet")
         title GEDDIT REDDIT 
     body 
     #header 
@@ -16,19 +19,24 @@ html(lang="en")
             input(type="text", name="place", size = 37, placeholder= "Example: Amazon River - South America")
             br
             p Description of Natural Wonder:
-            textarea(cols="30", rows="10"  name="naturalwonder", placeholder="Description")
+            textarea(cols="30", rows="10"  name="naturalwonder", placeholder= "Description")
             br
-            p Do you have an image link?
-            input(type="text", name="imagelink", size = 37,placeholder="Link to image")
+            p Enter image link below:
+            input(type="text", name="imagelink", size = 37,placeholder= "Link to image")
             br
             br
             button(type="submit") Submit
+        br
     #list 
         h1 Natural Wonders List
+    br
+    br
         //- h1 #{wonders}
     #card 
         each wonder in wonders
-            h3=`${wonder.place}`
-            p=` ${wonder.naturalwonder}`
-            img(src=`${wonder.imagelink}`, alt="Natural Wonder Image", srcset="")
+            #vote 
+                h3=`${wonder.place}`
+                p=` ${wonder.naturalwonder}`
+                img(src=`${wonder.imagelink}`, alt="Natural Wonder Image", srcset="")
+            br
     //-information is coming from the created item 'wonder' and coming from the things in the array

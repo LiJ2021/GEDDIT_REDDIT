@@ -58,7 +58,7 @@ app.post("/wonders", (req,res)=>{
     console.log("request body", req.body)
     wonderCollection.insertOne(req.body).then(result =>{
         console.log("result", result)
-        res.redirect("/") //says go back to the main page when done
+        res.redirect("/") //says go back to the main page
 }).catch(error =>console.log(error))
 
 })

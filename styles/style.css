@@ -1,13 +1,45 @@
+body {
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+  background-image: linear-gradient(180deg,  white, bisque);
+  height: 100%;
+    margin: 0;
+  /* color:bisque */
+}
 #header {
     padding: 30px;
     text-align: center;
-    background-image: url('Lake-MI-Beach-Sand-ns.jpeg');
-    /* background: #1abc9c; */
-    color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('Lake-MI-Beach-Sand-ns.jpeg');
+    background-size:cover;
+    color: bisque;
     font-size: 17px;
   }
   img{
     height: auto;
     width: 25rem;
 
+  }
+  #form, #card{
+    padding: 10px;
+    
+  }
+  /*  ??? how to border "each wonder in wonders"?
+  #vote {
+    padding: 10px;
+    border: 1px solid black;
+  }
+  */
+  #vote {
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  #list {
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px 0px;
+  }
+  
+  textarea, input {
+    font-family: 'Roboto', 'sans-serif';
   }
