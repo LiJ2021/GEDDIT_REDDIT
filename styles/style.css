@@ -4,8 +4,8 @@ body {
   background-image: linear-gradient(180deg,  white, bisque);
   height: 100%;
     margin: 0;
-  /* color:bisque */
 }
+
 #header {
     padding: 30px;
     text-align: center;
@@ -14,32 +14,32 @@ body {
     color: bisque;
     font-size: 17px;
   }
+
+  textarea, input {
+    font-family: 'Roboto', 'sans-serif';
+  }
+
   img{
     height: auto;
     width: 25rem;
+    border-radius: 3px;
 
   }
   #form, #card{
     padding: 10px;
     
   }
-  /*  ??? how to border "each wonder in wonders"?
-  #vote {
-    padding: 10px;
-    border: 1px solid black;
-  }
-  */
-  #vote {
-    padding: 10px;
-    border: 1px solid black;
-  }
-  
+
   #list {
     text-align: center;
     border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px 0px; 
+  }
+  /* How to border each wonder in wonders? */
+  #vote {
+    padding: 10px;
+    border: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px 0px;
+    border-radius: 4px;
   }
   
-  textarea, input {
-    font-family: 'Roboto', 'sans-serif';
-  }

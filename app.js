@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('images'))
 app.use(express.static('styles'))
 app.use(express.static('scripts'))
+app.use(express.static('public'))
 
 //import the stuff that we need
 const { MongoClient, ServerApiVersion } = require('mongodb');
