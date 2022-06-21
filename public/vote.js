@@ -3,11 +3,12 @@
 
 
 //what do i want?  For every instance of the vote-button, it should count it individually. For Each?
+// the database is called 'natural-wonders', the array of objects is called 'wonders'
+//?? wonders.forEach(voteButton())
 
 function voteButton(){
 let button = document.getElementById("vote-button"),
-// document.querySelectorAll('onclick')
-// 
+
 count = 0;
 button.onclick = function() {
     count += 1;
