@@ -39,9 +39,9 @@ html(lang="en")
                 p=` ${wonder.naturalwonder}`
                 img(src=`${wonder.imagelink}`, alt="Natural Wonder Image")
                 br
-                button(onclick = "voteButton()" id= "vote-button") Votes for me: 0
-                script(src= "vote.js") 
+                button(onclick = "voteButton(this)" id= "vote-button" value = 0) Votes for me: 0 
                 //- p Likes: 
                 //-     a(id="clicks") 0 
             br
+    script(src= "vote.js")
     //-information is coming from the created item 'wonder' and coming from the things in the array

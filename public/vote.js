@@ -7,14 +7,12 @@
 //?? wonders.forEach(voteButton())
 //??cookies
 
-function voteButton(){
-let button = document.getElementById("vote-button"),
-//ids are unique. how to call the instance of the button w/o id? this.vote-button?
-count = 0;
-button.onclick = function() {
+function voteButton(button){
+    let count = parseInt(button.value);
     count += 1;
     button.innerHTML = "Votes for me: " + count;
-}
+    button.value = count;
+    console.log(button)
 }
 // function onClick() {
 //     clicks = clicks + 1;
@@ -31,4 +29,8 @@ button.onclick = function() {
 // 
 // onClick()
 
+//how many likes does a post have - 
+//how to know how many likes are on a post - and add one
+//how do we store values in our database? put
 
+// instead of value = 0 make the value the ID of the post since were already looping through the post. update a post.
