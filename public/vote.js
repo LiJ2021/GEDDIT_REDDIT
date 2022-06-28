@@ -33,4 +33,5 @@ function voteButton(button){
 //how to know how many likes are on a post - and add one
 //how do we store values in our database? put
 
+//update likes in post
 // instead of value = 0 make the value the ID of the post since were already looping through the post. update a post.

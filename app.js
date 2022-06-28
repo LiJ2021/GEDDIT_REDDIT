@@ -15,6 +15,7 @@ app.use(express.static('public'))
 
 //import the stuff that we need
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const { response } = require('express')
 //cnxn address for our mongodb server/db
 const uri = "mongodb+srv://lianarogers:TcNaEPDTQ9IHozMa@cluster0.p3wsmb6.mongodb.net/?retryWrites=true&w=majority";
 
@@ -50,7 +51,16 @@ client.connect(err => {
 app.get("/", (req, res) =>{
     wonderCollection.find().toArray().then(results => { 
         console.log(results)
-    
+        //---------------- i want to do a get from the database that returns the new object id. The following code broke it - so I know its not right
+        // .then(res =>{
+        // do i need to 
+        //     return res.json()
+        // })
+    //     .then(data =>{
+    //     let objectId = results._id
+    //     //console.log("object id", results._id)
+    //     console.log("object id", data)
+    // })
     res.render("index", {wonders: results})
    })
 })
